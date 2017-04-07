@@ -1,2 +1,2 @@
 # random-quote
-This is a random quote generator built for the FCC Front End Development Certification.
+This is a Random Quote Machine built while following the FCC Front End Development Certification track.
