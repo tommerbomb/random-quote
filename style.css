@@ -1,0 +1,56 @@
+
+
+*{
+  /*background-color: gray;*/
+  font-family: Raleway, sans-serif;
+}
+
+.quote-box{
+  /*begin text with black color*/
+  color: black;
+  /*not sure exactly what this does*/
+  position: relative;
+  /*Top margin is set to 15% of containing element,
+  the rest are auto centered*/
+  margin: 15% auto auto auto;
+  /*width of this div is set to 500px */
+  width:500px;
+  /*padding of elements inside is 50px -top and bottom, 60px -left and right*/
+  padding:50px 60px;
+/*make borders have soft edges*/
+  border-radius: 15px;
+}
+
+.quote-text{
+  /*making the quote text centered*/
+text-align: center;
+/*default font size is 24px*/
+font-size: 24px;
+
+}
+
+.author-text{
+  /*align author text to right side of containing div*/
+text-align: right;
+font-size: 18px;
+
+}
+
+.buttons{
+  padding: 10px 25px;
+}
+
+#new-quote-btn{
+  background-color: black;
+  color: white;
+  font-weight: 900;
+  outline: none;
+}
+
+.btn:hover{
+  opacity: 0.5;
+}
+
+.fa{
+  font-size: 22px;
+}
