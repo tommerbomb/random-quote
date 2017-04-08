@@ -69,3 +69,11 @@ margin-bottom: 15px;
 #main{
   min-height: 100%;
 }
+
+a{
+  color:white;
+}
+
+a:hover{
+  text-decoration: none;
+}
