@@ -397,7 +397,7 @@ var quotes = [
 },
 {
 "quote" : "Nothing is impossible, the word itself says, “I’m possible!”",
-"name" : "–Audrey Hepburn"
+"name" : "Audrey Hepburn"
 },
 {
 "quote" : "The only way to do great work is to love what you do.",
@@ -412,19 +412,39 @@ var quotes = [
 var colors = ["rgb(72, 190, 255)", "rgb(61, 250, 205)", "rgb(67, 197, 158)", "rgb(61, 112, 104)", "rgb(20, 69, 61)"];
 var color = 0;
 
-$('#new-quote-btn').click(function() {
-    changeColors();
+$quote = $('.quote');
+$fademe = $('.fademe');
+$author = $('.author');
+$twitter = $('#twitter');
+$main = $('#main');
+$quotebox = $('.quote-box');
+$newquotebtn = $('#new-quote-btn');
+
+$newquotebtn.on('click',function() {
+  console.log($twitter.css('display'));
     currentQuote = new Quote();
-    $('.quote').html(" " + Quote().quote + " ");
-    $('.author').html(" " + Quote().author + " ");
+    $fademe.fadeOut(500, function(){
+      $quote.html("<i class='fa fa-quote-left'></i> " + Quote().quote + " <i class='fa fa-quote-right'></i>");
+      $author.html("- " + Quote().author + " ");
+      if($twitter.css('display') == 'none'){
+        $twitter.css('display','inline');
+      }
+      changeColors();
+      $fademe.fadeIn(500);
+    });
 });
 
+$twitter.on('click',function(){
+  alert("You are trying to post to Tweet!");
+})
+
+
+
 function changeColors() {
-    console.log(color);
-    $('body').css('background-color', colors[color]);
-    $('.quote-box').css('color', 'white');
-    $('#new-quote-btn').css('background-color', 'white');
-    $('#new-quote-btn').css('color', colors[color]);
+    $main.css('background-color', colors[color]);
+    $quotebox.css('color', 'white');
+    $newquotebtn.css('background-color', 'white');
+    $newquotebtn.css('color', colors[color]);
     if (color == colors.length - 1) {
         color = 0;
     } else color++;

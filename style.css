@@ -1,9 +1,8 @@
-
-
-*{
-  /*background-color: gray;*/
-  font-family: Raleway, sans-serif;
+html, body {
+    font-family: Raleway, sans-serif;
+    height:100%;
 }
+
 
 .quote-box{
   /*begin text with black color*/
@@ -12,9 +11,9 @@
   position: relative;
   /*Top margin is set to 15% of containing element,
   the rest are auto centered*/
-  margin: 15% auto auto auto;
+  margin: 8% auto auto auto;
   /*width of this div is set to 500px */
-  width:500px;
+  width:550px;
   /*padding of elements inside is 50px -top and bottom, 60px -left and right*/
   padding:50px 60px;
 /*make borders have soft edges*/
@@ -27,13 +26,15 @@ text-align: center;
 /*default font size is 24px*/
 font-size: 24px;
 
+margin-bottom: 15px;
+
 }
 
 .author-text{
   /*align author text to right side of containing div*/
 text-align: right;
 font-size: 18px;
-
+margin-bottom: 15px;
 }
 
 .buttons{
@@ -51,6 +52,20 @@ font-size: 18px;
   opacity: 0.5;
 }
 
+#twitter:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#twitter{
+  margin-left: 30%;
+  display: none;
+}
+
 .fa{
   font-size: 22px;
+}
+
+#main{
+  min-height: 100%;
 }
