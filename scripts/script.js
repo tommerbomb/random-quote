@@ -416,6 +416,7 @@ $quote = $('.quote');
 $fademe = $('.fademe');
 $author = $('.author');
 $twitter = $('#twitter');
+$a = $('a');
 $main = $('#main');
 $quotebox = $('.quote-box');
 $newquotebtn = $('#new-quote-btn');
@@ -424,18 +425,20 @@ $newquotebtn.on('click',function() {
   console.log($twitter.css('display'));
     currentQuote = new Quote();
     $fademe.fadeOut(500, function(){
-      $quote.html("<i class='fa fa-quote-left'></i> " + Quote().quote + " <i class='fa fa-quote-right'></i>");
-      $author.html("- " + Quote().author + " ");
+      $quote.html("<i class='fa fa-quote-left'></i> " + currentQuote.quote + " <i class='fa fa-quote-right'></i>");
+      $author.html("- " + currentQuote.author + " ");
       if($twitter.css('display') == 'none'){
         $twitter.css('display','inline');
       }
       changeColors();
       $fademe.fadeIn(500);
     });
+    $a.attr('href','https://twitter.com/intent/tweet?text=' + encodeURIComponent('"' + currentQuote.quote + '"' + ' - ' + currentQuote.author));
 });
 
-$twitter.on('click',function(){
-  alert("You are trying to post to Tweet!");
+$a.on('click',function(){
+
+
 })
 
 
